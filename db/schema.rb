@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_06_06_094455) do
 
   create_table "comments", force: :cascade do |t|
-    t.string "post_id"
+    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -25,13 +25,13 @@ ActiveRecord::Schema.define(version: 2021_06_06_094455) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "customer_id"
+    t.integer "customer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "votes", force: :cascade do |t|
-    t.string "comment_id"
+    t.integer "comment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
